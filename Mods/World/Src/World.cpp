@@ -63,6 +63,9 @@ void World::OnFrameUpdate(const SGameUpdateEvent& p_UpdateEvent) {
     if (m_IsTimeMultiplierEnabled && Globals::GameTimeManager->m_fGameTimeMultiplier != m_GameTimeMultiplier) {
         Globals::GameTimeManager->m_fGameTimeMultiplier = m_GameTimeMultiplier;
     }
+    else if (!m_IsTimeMultiplierEnabled && Globals::GameTimeManager->m_fGameTimeMultiplier != 1.0f) {
+        Globals::GameTimeManager->m_fGameTimeMultiplier = 1.0f;
+    }
 }
 
 DEFINE_ZHM_PLUGIN(World);
