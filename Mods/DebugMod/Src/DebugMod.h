@@ -35,6 +35,7 @@ private:
 private:
     void DrawOptions(bool p_HasFocus);
     void DrawPositionBox(bool p_HasFocus);
+    void DrawDemoWindow(bool p_hasFocus);
 
     void DrawReasoningGrid(IRenderer* p_Renderer);
     void DrawNavMesh(IRenderer* p_Renderer);
@@ -68,6 +69,7 @@ private:
 private:
     bool m_ShowDebugWindow = false;
     bool m_ShowPositionsWindow = false;
+    bool m_ShowImGuiDemoWindow = false;
 
     bool m_RenderPlayerHealth = false;
     bool m_RenderPlayerOutfitHitPoints = false;

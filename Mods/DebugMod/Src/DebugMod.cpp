@@ -51,11 +51,23 @@ void DebugMod::OnDrawMenu() {
 	if (ImGui::Button(ICON_MD_PLACE " POSITIONS")) {
 		m_ShowPositionsWindow = !m_ShowPositionsWindow;
 	}
+
+	if (ImGui::Button(ICON_MD_BUG_REPORT " ImGuiDemo")) {
+		m_ShowImGuiDemoWindow = !m_ShowImGuiDemoWindow;
+	}
 }
 
 void DebugMod::OnDrawUI(bool p_HasFocus) {
 	DrawOptions(p_HasFocus);
 	DrawPositionBox(p_HasFocus);
+	DrawDemoWindow(p_HasFocus);
+}
+
+void DebugMod::DrawDemoWindow(const bool p_hasFocus) {
+    if (!p_hasFocus || !m_ShowImGuiDemoWindow) {
+        return;
+    }
+    ImGui::ShowDemoWindow(&m_ShowImGuiDemoWindow);
 }
 
 void DebugMod::DrawOptions(const bool p_HasFocus) {
