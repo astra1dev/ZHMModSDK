@@ -99,7 +99,7 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) {
         );
 
         // We return true here because if we return false then whatever app is loading this will crash.
-        if (s_ExecutableName != "hitman3.exe")
+        if (s_ExecutableName != "hitman2.exe")
             return true;
 
         g_ZHMModSDK = LoadLibraryA("ZHMModSDK");
