@@ -309,7 +309,7 @@ private:
     uint32_t m_ImageSize;
 
     std::string m_IgnoredVersion;
-    bool m_DisableUpdateCheck = false;
+    bool m_DisableUpdateCheck = true;
 
     std::string m_AutoLoadScene;
 
