@@ -7,7 +7,7 @@
 #include <Glacier/ZModule.h>
 #include <Glacier/ZResource.h>
 #include <Util/StringUtils.h>
-#include <ResourceLib_HM3.h>
+//#include <ResourceLib_HM2.h>
 #include <simdjson.h>
 #include <filesystem>
 #include <Util/ResourceUtils.h>
@@ -233,6 +233,7 @@ const TArray<uint32_t>& ModSDK::GetChunkIndicesForRuntimeResourceId(const ZRunti
     return s_Iterator != m_ResourceIdToChunkMap.end() ? s_Iterator->second : s_Empty;
 }
 
+/*
 std::tuple<ZResourceIndex, ZRuntimeResourceID> ModSDK::LoadResourceFromBIN1(
     ResourceMem* p_ResourceMem, std::string_view p_MetaJson, std::function<void(ZResourcePending*)> p_Install
 ) {
@@ -376,13 +377,13 @@ bool ModSDK::LoadQnEntity(
 
     Logger::Debug("Converted from QN to RT! Generating BIN1 resources from RT JSON...");
 
-    const auto s_ResourceTempMem = HM3_GetGeneratorForResource("TEMP")->FromJsonStringToResourceMem(
+    const auto s_ResourceTempMem = HM2_GetGeneratorForResource("TEMP")->FromJsonStringToResourceMem(
         s_QnData->factory_json,
         strlen(s_QnData->factory_json),
         false
     );
 
-    const auto s_ResourceTbluMem = HM3_GetGeneratorForResource("TBLU")->FromJsonStringToResourceMem(
+    const auto s_ResourceTbluMem = HM2_GetGeneratorForResource("TBLU")->FromJsonStringToResourceMem(
         s_QnData->blueprint_json,
         strlen(s_QnData->blueprint_json),
         false
@@ -411,7 +412,7 @@ bool ModSDK::LoadQnEntity(
             p_BlueprintFactoryOut.m_nResourceIndex.val = r->m_pResource.m_nResourceIndex.val;
         }
 
-        HM3_GetGeneratorForResource("TBLU")->FreeResourceMem(s_ResourceTbluMem);
+        HM2_GetGeneratorForResource("TBLU")->FreeResourceMem(s_ResourceTbluMem);
     });
 
     Logger::Debug("TBLU rid = {}, index = {}", s_TbluId, s_TbluIndex.val);
@@ -427,10 +428,11 @@ bool ModSDK::LoadQnEntity(
             p_FactoryOut.m_nResourceIndex.val = r->m_pResource.m_nResourceIndex.val;
         }
 
-        HM3_GetGeneratorForResource("TEMP")->FreeResourceMem(s_ResourceTempMem);
+        HM2_GetGeneratorForResource("TEMP")->FreeResourceMem(s_ResourceTempMem);
     });
 
     Logger::Debug("TEMP rid = {}, index = {}", s_TempId, s_TempIndex.val);
 
     return true;
 }
+*/

@@ -116,7 +116,7 @@ target_link_libraries(ZHMModSDK PUBLIC
         comctl32
         sentry::sentry
         zhmmodsdk_rs
-        ResourceLib_HM3
+        #ResourceLib_HM2
 )
 
 install(TARGETS ZHMModSDK
@@ -173,8 +173,8 @@ install(FILES "${VCPKG_BUILD_ROOT}/include/imgui_stdlib.h" DESTINATION include)
 install(FILES "${VCPKG_BUILD_ROOT}/include/implot.h" DESTINATION include)
 
 # Install ResourceLib.
-install(TARGETS ResourceLib_HM3
-        RUNTIME DESTINATION bin
-)
+#install(TARGETS ResourceLib_HM2
+#        RUNTIME DESTINATION bin
+#)
 
-install(FILES $<TARGET_PDB_FILE:ResourceLib_HM3> DESTINATION bin)
+#install(FILES $<TARGET_PDB_FILE:ResourceLib_HM2> DESTINATION bin)

@@ -265,11 +265,11 @@ private:
 #pragma region ResourceLoading
 
 public:
-    bool LoadQnEntity(
-        const ZString& p_Json,
-        TResourcePtr<ZTemplateEntityBlueprintFactory>& p_BlueprintFactoryOut,
-        TResourcePtr<ZTemplateEntityFactory>& p_FactoryOut
-    ) override;
+    // bool LoadQnEntity(
+    //     const ZString& p_Json,
+    //     TResourcePtr<ZTemplateEntityBlueprintFactory>& p_BlueprintFactoryOut,
+    //     TResourcePtr<ZTemplateEntityFactory>& p_FactoryOut
+    // ) override;
 
     bool IsChunkMounted(uint32_t p_ChunkIndex) override;
     void MountChunk(uint32_t p_ChunkIndex) override;

@@ -261,11 +261,11 @@ public:
      * @param p_FactoryOut The resulting factory resource.
      * @return True if the resources were loaded successfully, false otherwise.
      */
-    virtual bool LoadQnEntity(
-        const ZString& p_Json,
-        TResourcePtr<ZTemplateEntityBlueprintFactory>& p_BlueprintFactoryOut,
-        TResourcePtr<ZTemplateEntityFactory>& p_FactoryOut
-    ) = 0;
+    // virtual bool LoadQnEntity(
+    //     const ZString& p_Json,
+    //     TResourcePtr<ZTemplateEntityBlueprintFactory>& p_BlueprintFactoryOut,
+    //     TResourcePtr<ZTemplateEntityFactory>& p_FactoryOut
+    // ) = 0;
 
     /**
      * Check if a chunk is mounted.
